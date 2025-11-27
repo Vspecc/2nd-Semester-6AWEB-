@@ -1,0 +1,127 @@
+/* Directives Component Styles */
+
+:host {
+    display: block;
+    padding: 20px;
+}
+
+/* General Table Styling */
+table {
+    width: 100%;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border-radius applies to table content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Styling the cells and rows for general examples (non-data tables) */
+table tr:first-child td {
+    border-top: none;
+}
+
+table td {
+    padding: 15px;
+    border-top: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+/* Styling for messages/notes displayed by @if */
+h2, p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* Input Styling */
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 1em;
+}
+
+/* List Styling (City List) */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display list items in a row */
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ul li {
+    background-color: #e6f7ff; /* Light blue tag */
+    color: #007bff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    border: 1px solid #b3d7ff;
+}
+
+/* Data Table Styling (Student List) */
+table:last-child { /* Target the student list table */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table thead {
+    background-color: #f7f9fa; /* Header background */
+    border-bottom: 2px solid #e0e0e0;
+}
+
+table th {
+    text-align: left;
+    padding: 15px;
+    color: #34495e;
+    font-weight: 600;
+}
+
+table tbody tr:hover {
+    background-color: #f0f8ff; /* Light hover effect */
+}
+
+table tbody td {
+    padding: 12px 15px;
+}
+
+/* Status text styling */
+table tbody td p {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: 0; /* Remove default paragraph margin */
+}
+
+table tbody td:last-child p:nth-child(1) { /* Active status */
+    color: #1e7e34;
+    background-color: #d4edda;
+}
+
+table tbody td:last-child p:nth-child(2) { /* Inactive status */
+    color: #856404;
+    background-color: #fff3cd;
+}
