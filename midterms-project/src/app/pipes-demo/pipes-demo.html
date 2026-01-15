@@ -1,0 +1,139 @@
+<div class="dashboard-container">
+
+  <aside class="sidebar">
+    <div class="logo-box">A</div>
+    <div class="nav-item active">🏠</div>
+    <div class="nav-item">📂</div>
+    <div class="nav-item">📊</div>
+    <div class="nav-item">⚙️</div>
+  </aside>
+
+  <main class="main-content">
+
+    <header class="top-bar">
+      <h1>Dashboard <span class="subtitle">Pipe Demonstrations</span></h1>
+      <div class="user-profile">
+        <span class="notification-dot"></span>
+        <div class="avatar">👩‍💻</div>
+      </div>
+    </header>
+
+    <div class="cards-grid">
+
+      <div class="card large-card">
+        <div class="card-header">
+          <h3>Date & Time</h3>
+          <span class="badge">Async Active</span>
+        </div>
+        <div class="card-body">
+          <div class="data-row">
+            <span class="label">Standard Date</span>
+            <span class="value">{{ presentDate | date }}</span>
+          </div>
+
+          <div class="data-row">
+            <span class="label">Short Date</span>
+            <span class="value">{{ presentDate | date: 'shortDate' }}</span>
+          </div>
+
+          <div class="data-row">
+            <span class="label">Full Date</span>
+            <span class="value">{{ presentDate | date: 'fullDate' }}</span>
+          </div>
+
+          <div class="data-row">
+            <span class="label">Full Date (Uppercase)</span>
+            <span class="value">{{ presentDate | date:'fullDate' | uppercase }}</span>
+          </div>
+
+          <div class="data-row highlight">
+            <span class="label">Real-time Clock (Async)</span>
+            <span class="value">{{ time$ | async | date:'mediumTime' }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Financials</h3>
+        </div>
+        <div class="card-body">
+          <div class="stat-block">
+            <div class="stat-label">Price (USD)</div>
+            <div class="stat-number down">
+              {{ price | currency:'USD':true }}
+            </div>
+            <p class="desc">Formatted with 'USD':true</p>
+          </div>
+
+          <div class="stat-block mt-4">
+            <div class="stat-label">Price (INR)</div>
+            <div class="stat-number">
+              {{ price | currency:'INR' }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Statistics</h3>
+        </div>
+        <div class="card-body">
+
+          <div class="stat-block">
+            <div class="stat-label">Decimal Demo</div>
+            <div class="stat-number">{{ 3.14159265 | number: '3.2-2' }}</div>
+            <p class="desc">Formatted with '3.2-2'</p>
+          </div>
+
+          <div class="stat-block mt-4">
+            <div class="stat-label">Completion Rate</div>
+            <div class="progress-bar-container">
+              <div class="progress-val">{{ completionRate | percent }}</div>
+              <div class="progress-bar">
+                <div class="fill" [style.width]="(completionRate | percent)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card wide-card">
+        <div class="card-header">
+          <h3>Data Management</h3>
+        </div>
+        <div class="card-body row-layout">
+
+          <div class="col-half">
+            <span class="label">String Slice</span>
+            <div class="value-box">
+               Original: 'AngularPipes'<br>
+               <strong>Result: "{{ 'AngularPipes' | slice:2:6 }}"</strong>
+            </div>
+            <p class="desc">Slicing indices 2 to 6.</p>
+          </div>
+
+          <div class="col-half">
+            <span class="label">Course Name (TitleCase)</span>
+            <div class="value-box">{{ courseTitle | titlecase }}</div>
+            <p class="desc">Capitalizes first letters.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Debug Info</h3>
+        </div>
+        <div class="card-body">
+          <div class="code-block">
+            <pre>{{ userConfig | json }}</pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>

@@ -1,0 +1,236 @@
+/* src/app/pipes-demo/pipes-demo.css */
+
+/* Layout Structure */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #000000; /* Deep Black */
+}
+
+.sidebar {
+  width: 80px;
+  background: #0A0A0A; /* Slightly lighter black for separation */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  border-right: 1px solid #222222; /* Subtle dark border */
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 3rem;
+}
+
+/* Sidebar Elements */
+.logo-box {
+  width: 40px;
+  height: 40px;
+  background: #ffffff; /* White box to pop against black */
+  color: #000000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.nav-item {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-item.active {
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Header */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.subtitle {
+  font-weight: 400;
+  color: #64748B; /* Muted gray for subtitle */
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+/* Grid Layout */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card Styling */
+.card {
+  background: #111111; /* Dark Grey Cards */
+  border: 1px solid #222; /* Border for definition since shadows are less visible */
+  border-radius: 24px;
+  padding: 24px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #444; /* Highlight border on hover */
+}
+
+.large-card {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.wide-card {
+  grid-column: span 2;
+}
+
+/* Card Content */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.badge {
+  background: rgba(46, 125, 50, 0.2); /* Darker transparent green */
+  color: #4ade80; /* Neon green text */
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.label {
+  display: block;
+  font-size: 0.85rem;
+  color: #94A3B8; /* Light gray label */
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #F8FAFC; /* Almost white value */
+}
+
+.desc {
+  font-size: 0.8rem;
+  color: #64748B;
+  margin: 4px 0 16px 0;
+  line-height: 1.4;
+}
+
+/* Specific Stat Styles */
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.stat-number.down {
+  color: #F87171; /* Brighter Red/Salmon for dark mode */
+}
+
+.highlight {
+  background: #1A202C; /* Dark blue-grey */
+  padding: 12px;
+  border-radius: 12px;
+  border-left: 4px solid #63B3ED; /* Bright Blue */
+}
+
+/* Progress Bar (Percent Pipe) */
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.progress-val {
+  font-weight: 700;
+  color: #48BB78; /* Bright Green */
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: #2D3748; /* Dark track */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ED8936 0%, #48BB78 100%); /* Adjusted orange to green */
+}
+
+/* List Styling (Slice Pipe) */
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #2D3748;
+}
+
+.user-avatar {
+  width: 24px;
+  height: 24px;
+  background: #4A5568;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.row-layout {
+  display: flex;
+  gap: 20px;
+}
+
+.col-half {
+  flex: 1;
+}
+
+/* Code Block (Json Pipe) */
+.code-block {
+  background: #000000; /* Pure black code block */
+  color: #81E6D9; /* Teal text */
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-family: monospace;
+  border: 1px solid #333;
+}
