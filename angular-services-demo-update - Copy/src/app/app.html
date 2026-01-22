@@ -1,0 +1,91 @@
+<div class="status-strip">
+  <div class="status-info">
+    <span class="info-text">📅 {{todaydate}}</span>
+    <span class="divider">/</span>
+    <span class="info-text">🛠️ {{componentproperty}}</span>
+  </div>
+
+  <app-new-cmp class="status-badges"></app-new-cmp>
+</div>
+
+<div class="layout-wrapper">
+
+  <header class="hero-header">
+    <h1>Team Directory</h1>
+  </header>
+
+  <div class="app-container">
+
+    <aside class="sidebar">
+      <div class="sidebar-title">
+        <div class="icon-group">👥</div>
+        <h2>Team Directory</h2>
+      </div>
+
+      <div class="section-label">Quick Actions</div>
+      <div class="sidebar-actions">
+        <button class="btn-sidebar">
+          <span class="icon">+</span> Add Team Member
+        </button>
+        <button class="btn-sidebar">
+          <span class="icon">⊞</span> New Team
+        </button>
+      </div>
+
+      <div class="section-label">Teams</div>
+      <nav class="nav-list">
+        <a href="#" class="nav-item active"><span class="nav-icon">👥</span> All Teams</a>
+        <a href="#" class="nav-item"><span class="nav-icon">💼</span> Sales</a>
+        <a href="#" class="nav-item"><span class="nav-icon">⚙️</span> Engineering</a>
+        <a href="#" class="nav-item"><span class="nav-icon">🚀</span> Marketing</a>
+        <a href="#" class="nav-item"><span class="nav-icon">🎨</span> Design</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="db-link"><span class="icon">🗄️</span> Database</div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+
+      <div class="content-header-bar">
+        <h3>Team Members</h3>
+      </div>
+
+      <div class="controls-bar">
+        <div class="tabs">
+          <button class="tab active">☰ Table</button>
+          <button class="tab">⊞ Grid</button>
+          <button class="tab">👥 By Team</button>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="directory-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Aa Name</th>
+              <th>◎ Role</th>
+              <th>@ Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (employee of employees; track employee.id) {
+              <tr>
+                <td class="text-muted">{{ employee.id }}</td>
+                <td class="col-primary">
+                  <span class="avatar-placeholder">👤</span>
+                  {{ employee.firstname }} {{ employee.lastname }}
+                </td>
+                <td><span class="badge">Employee</span></td>
+                <td>{{ employee.email }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="content-header-bar mt-large">
+        <h3>Product Inventory</h3>
+      </div>
