@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>List from Main</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (user of httpusers(); track user.id) {
+        <tr>
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.website }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <h1 style="margin-top: 50px;">CHALLENGE: Top 5 Posts</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Post Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (post of challengePosts(); track post.id) {
+        <tr class="challenge-row">
+          <td>{{ post.id }}</td>
+          <td style="text-transform: capitalize;">{{ post.title }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

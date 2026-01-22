@@ -1,0 +1,143 @@
+/* src/styles.css */
+:root {
+  /* --- Warm & Professional Palette --- */
+  --bg-body: #F9F7F2;      /* Warm Alabaster */
+  --bg-card: #FFFFFF;      /* Pure White */
+  --bg-header: #EBE5DC;    /* Soft Beige */
+
+  --text-primary: #2D2420; /* Dark Coffee */
+  --text-secondary: #6D5D55; /* Warm Taupe */
+
+  --accent-color: #C05621; /* Muted Terracotta */
+  --accent-light: #F2E8E3; /* Light Blush (Hover) */
+  --border-color: #E6DDD5;
+
+  --shadow-soft: 0 10px 40px rgba(60, 40, 30, 0.08);
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  animation: pageFadeIn 0.8s ease-out forwards;
+}
+
+/* --- Typography --- */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0 0 25px 0;
+  display: flex;
+  align-items: center;
+}
+
+h1::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 28px;
+  background-color: var(--accent-color);
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+/* --- Modern Warm Tables --- */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 60px; /* Space between tables */
+}
+
+thead {
+  background-color: var(--bg-header);
+}
+
+th {
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 18px 24px;
+  text-align: left;
+  border-bottom: 2px solid #DCD3C9;
+}
+
+td {
+  padding: 18px 24px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+/* Styling specifically for the ID column */
+td:first-child {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Interactive States --- */
+tbody tr {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: default;
+}
+
+tbody tr:hover {
+  background-color: var(--accent-light);
+  transform: scale(1.005);
+}
+
+tbody tr:hover td {
+  color: var(--text-primary);
+}
+
+/* --- Animations --- */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+tbody tr {
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+/* Staggered Row Animation */
+tbody tr:nth-child(1) { animation-delay: 0.1s; }
+tbody tr:nth-child(2) { animation-delay: 0.15s; }
+tbody tr:nth-child(3) { animation-delay: 0.2s; }
+tbody tr:nth-child(4) { animation-delay: 0.25s; }
+tbody tr:nth-child(5) { animation-delay: 0.3s; }
+tbody tr:nth-child(6) { animation-delay: 0.35s; }
+tbody tr:nth-child(7) { animation-delay: 0.4s; }
+tbody tr:nth-child(8) { animation-delay: 0.45s; }
