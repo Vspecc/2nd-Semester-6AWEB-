@@ -1,0 +1,15 @@
+<div class="contact-container">
+  <form #contactForm="ngForm">
+    <label>Name: <input type="text" name="name" ngModel></label>
+    <label>Email: <input type="email" name="email" ngModel></label>
+    <label>Message: <textarea name="message" ngModel></textarea></label>
+    <button type="button">Submit</button>
+  </form>
+
+  <div class="preview">
+    <h3>Form Preview</h3>
+    <p>Name: {{ contactForm.value.name | uppercase }}</p>
+    <p>Email: {{ contactForm.value.email }}</p>
+    <p>Message: {{ contactForm.value.message }}</p>
+  </div>
+</div>

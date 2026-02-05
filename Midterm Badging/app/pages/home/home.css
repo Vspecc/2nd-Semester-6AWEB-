@@ -1,0 +1,165 @@
+/* --- Hero Section & Typography --- */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00ff88, #60efff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtext {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+/* --- Professional Button Group --- */
+.cta-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+/* Base style for both buttons ensures perfect symmetry */
+.primary-btn, .secondary-btn {
+  height: 54px; 
+  padding: 0 36px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Solid Neon Green Action Button */
+.primary-btn {
+  background: var(--accent-green);
+  color: #020804;
+  border: none;
+}
+
+.primary-btn:hover {
+  background: #00e67a;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Ghost Button with Matching Neon Green Hover */
+.secondary-btn {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--glass-border);
+}
+
+.secondary-btn:hover {
+  background: rgba(0, 255, 136, 0.05); /* Matches brand color theme */
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+  transform: translateY(-2px);
+}
+
+/* --- Feature Grid & Professional Card Styling --- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 6rem;
+}
+
+.feature-card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+  color: var(--text-main);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* --- Latest Research Section --- */
+.insights-section {
+  padding-top: 4rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.insights-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  padding: 30px;
+}
+
+.category-tag {
+  color: var(--accent-green);
+  font-family: 'Monaco', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.read-more {
+  margin-top: auto;
+  color: var(--accent-green);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: gap 0.2s;
+}
+
+.read-more:hover {
+  gap: 8px;
+}

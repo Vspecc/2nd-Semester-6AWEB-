@@ -1,0 +1,37 @@
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--bg-card);
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-muted);
+}
+
+ul li::before {
+  content: "→";
+  color: var(--accent-green);
+  margin-right: 15px;
+}
+
+.date-display {
+  background: rgba(0, 255, 136, 0.1);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+}

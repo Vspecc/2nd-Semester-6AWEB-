@@ -1,0 +1,42 @@
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--text-muted);
+}
+
+input, textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+button {
+  background: var(--accent-green);
+  color: black;
+  font-weight: 700;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: var(--neon-glow);
+  transform: scale(1.02);
+}
+
+.preview {
+  border-left: 1px solid var(--glass-border);
+  padding-left: 40px;
+}

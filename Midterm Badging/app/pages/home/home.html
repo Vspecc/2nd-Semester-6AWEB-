@@ -1,0 +1,46 @@
+<section class="hero-section">
+  <h1 class="hero-text">The Future of Computation, <span class="gradient-text">Quantum-Ready</span></h1>
+  <p class="hero-subtext">
+    Harnessing the power of superposition and entanglement to solve the world's most complex problems. 
+    From cryptography to molecular simulation, the next era of computing starts here.
+  </p>
+  <div class="cta-group">
+    <button class="primary-btn">Explore Framework</button>
+    <button class="secondary-btn">View Documentation</button>
+  </div>
+</section>
+
+<div class="feature-grid">
+  <div class="card feature-card">
+    <div class="icon-box">⚛️</div>
+    <h3>Qubit Engineering</h3>
+    <p>Advanced error correction and coherence management for stable quantum processing units.</p>
+  </div>
+  <div class="card feature-card">
+    <div class="icon-box">🔐</div>
+    <h3>Post-Quantum Crypto</h3>
+    <p>Securing data against tomorrow's threats with lattice-based encryption standards.</p>
+  </div>
+  <div class="card feature-card">
+    <div class="icon-box">🌀</div>
+    <h3>Algorithmic Velocity</h3>
+    <p>Exponential speedups for optimization tasks and high-dimensional data analysis.</p>
+  </div>
+</div>
+
+<div class="insights-section">
+  <h2>Latest Research Updates</h2>
+  <div *ngIf="posts$ | async as posts" class="updates-grid">
+    <div *ngFor="let post of posts | slice:0:3" class="card post-card">
+      <span class="category-tag">Research Node #{{ post.id }}</span>
+      <h3>{{ post.title }}</h3> 
+      <p>{{ post.body | truncate:80 }}</p>
+      <a class="read-more">Read Abstract →</a>
+    </div>
+  </div>
+</div>
+
+<div class="cta-group">
+  <button class="primary-btn">Explore Framework</button>
+  <button class="secondary-btn">View Documentation</button>
+</div>

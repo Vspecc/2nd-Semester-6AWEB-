@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(2, 8, 4, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  font-family: 'Monaco', monospace;
+  color: var(--accent-green);
+  font-weight: bold;
+}
+
+.menu a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover, .menu a.active-link {
+  color: var(--accent-green);
+}

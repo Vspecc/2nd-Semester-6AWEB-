@@ -1,0 +1,26 @@
+<div class="services-header">
+  <h2>Our Core <span class="gradient-text">Solutions</span></h2>
+  <p class="hero-subtext">Precision engineered services for the digital age.</p>
+</div>
+
+<div class="search-container">
+  <input 
+    type="text" 
+    [(ngModel)]="searchTerm" 
+    placeholder="Filter capabilities..." 
+    class="search-box"
+  >
+</div>
+
+<div class="services-grid">
+  <div *ngFor="let service of filteredServices" class="card service-card">
+    <span class="service-id">// SECTION_{{ service.id }}</span>
+    
+    <h3>{{ service.title }}</h3>
+    <p>{{ service.description }}</p>
+    
+    <div class="tag-group">
+      <span *ngFor="let tag of service.tags" class="tag">{{ tag }}</span>
+    </div>
+  </div>
+</div>
