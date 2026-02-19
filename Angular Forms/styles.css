@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;900&display=swap');
+
+body {
+  background-color: #ffcc33; /* Bright yellow from the image */
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row; /* Aligns forms side-by-side */
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* Hide the horizontal line for this layout */
+hr { display: none; }
+
+main::after {
+  position: absolute;
+  bottom: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  color: #000;
+  letter-spacing: -2px;
+}
